@@ -1,1 +1,10 @@
+.DS_Store
+postgres
+*.pyc
+__pycache__
 .env
+db.sqlite4
+/.nvm
+/node_modules
+sqlite
+/backend/media
