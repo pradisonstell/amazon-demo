@@ -30,11 +30,10 @@ def run(playwright):
 
     login_page.login(USERNAME, PASSWORD)
     home_page.search_product("iPhone 17")
-    cart_page.open_cart()
+    cart_page.add_to_cart()
     cart_page.checkout_cart()
-    cart_page.clear_cart()
-
     payment_page.close_payment_page()
+    cart_page.clear_cart()
 
     context.close()
     browser.close()
