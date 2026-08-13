@@ -27,10 +27,10 @@ def run(playwright):
     cart_page = CartPage(page)
     payment_page = PaymentPage(page)
 
-    if page.get_by_role("link", name="Hello, sign in Account & Lists").is_visible():
-        login_page.login(USERNAME, PASSWORD)
+    page.goto("https://www.amazon.in/")
 
-    page.wait_for_load_state("networkidle")
+    login_page.login(USERNAME, PASSWORD)
+    # page.wait_for_load_state("networkidle")
     context.storage_state(path=AUTH_FILE)
 
     home_page.search_product("iPhone 17")
