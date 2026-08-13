@@ -8,3 +8,6 @@ db.sqlite4
 /node_modules
 sqlite
 /backend/media
+/.auth
+/playwright/.auth
+.auth
