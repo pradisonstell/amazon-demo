@@ -32,9 +32,13 @@ def run(playwright):
     login_page.login(USERNAME, PASSWORD)
     # page.wait_for_load_state("networkidle")
     context.storage_state(path=AUTH_FILE)
-
     home_page.search_product("iPhone 17")
     cart_page.add_to_cart()
+
+    home_page.search_product("Samsung S25")
+    home_page.find_with_spec("Samsung", ["12GB", "256GB"])
+    cart_page.add_to_cart()
+
     cart_page.checkout_cart()
     payment_page.close_payment_page()
     cart_page.clear_cart()
