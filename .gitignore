@@ -11,3 +11,4 @@ sqlite
 /.auth
 /playwright/.auth
 .auth
+report.html
